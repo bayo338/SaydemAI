@@ -28,7 +28,7 @@ const Home = () => {
                 strings: ['technical', 'project', 'business', 'research', 'design'],
                 autoStart: true,
                 loop: true,
-                delay: 100,
+                delay: 75,
                 deleteSpeed: 50,
               }}
             />
