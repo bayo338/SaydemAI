@@ -28,8 +28,8 @@ const Home = () => {
                 strings: ['technical', 'project', 'business', 'research', 'design'],
                 autoStart: true,
                 loop: true,
-                delay: 75,
-                deleteSpeed: 50,
+                delay: 100,
+                deleteSpeed: 75,
               }}
             />
           </span> report

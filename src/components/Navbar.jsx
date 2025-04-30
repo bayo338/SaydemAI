@@ -33,7 +33,7 @@ const Navbar = ({ hideAuthButtons = false }) => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-white text-green-950 shadow-md dark:bg-gray-900`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-white shadow-md dark:bg-gray-900`}>
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 relative">
 
@@ -44,7 +44,7 @@ const Navbar = ({ hideAuthButtons = false }) => {
           </Link>
 
         {/* Navigation links */}
-        <div className="hidden md:flex space-x-6 text-lg">
+        <div className="hidden md:flex space-x-6 text-lg text-green-950 dark:text-slate-100">
         <span
         onClick={() => handleNavClick("home")}
         className="cursor-pointer hover:text-green-400 "
@@ -108,10 +108,10 @@ const Navbar = ({ hideAuthButtons = false }) => {
       {/* Dark Mode Toggle */}
       <button 
         onClick={toggleDarkMode}
-        className="hidden md:block p-2 text-gray-600 hover:text-green-600 transition-colors duration-200"
+        className="hidden md:block p-2 text-gray-600 dark:text-slate-100  transition-colors duration-200"
         title="Toggle Dark Mode"
       >
-        {darkMode ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
+        {darkMode ? <SunIcon className="w-6 h-6 hover:text-green-600" /> : <MoonIcon className="w-6 h-6 hover:text-green-600" />}
       </button>
       </div>
 

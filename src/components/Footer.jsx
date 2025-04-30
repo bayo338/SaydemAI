@@ -21,13 +21,7 @@ const Footer = () => (
             <img src="src/assets/logoWhite.png" alt="Saydem AI Logo" className="" />
             {/* <span className="text-2xl font-bold">Saydem AI</span> */}
           </div>
-          <p className="text-gray-300">
-            Get your technical report handled <span className="text-green-400">swiftly</span>
-          </p>
-          {/* <button className="mt-4 px-4 py-2 bg-green-600 hover:bg-green-500 rounded-md transition">
-            Start Now
-          </button> */}
-
+          
           <Link to="/get-started" className='bg-blue-700'>
               <button className="flex items-center gap-2 px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 active:bg-green-900 mt-4 transition duration-200">
               Get Started
