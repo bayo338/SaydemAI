@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiFeather  } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return (
@@ -18,10 +19,21 @@ const Home = () => {
       <div className="absolute -bottom-32 -right-16 w-60 h-60 bg-green-200 rounded-full opacity-30" />
       
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight pt-14 dark:text-white">
-          Get your final year project  
-          <br />swiftly handled by <span className="text-green-600">AI</span>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight pt-14 dark:text-white">
+        Get your{" "}
+        <span className="inline-block text-green-600">
+            <Typewriter
+              options={{
+                strings: ['technical', 'project', 'business', 'research', 'design'],
+                autoStart: true,
+                loop: true,
+                delay: 100,
+                deleteSpeed: 50,
+              }}
+            />
+          </span> report
+          <br />handled <span className="text-green-600">swiftly</span>
         </h1>
 
         {/* <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -29,7 +41,7 @@ const Home = () => {
           save time and focus on what matters.
         </p> */}
 
-        <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto dark:text-gray-300 ">
+        <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto dark:text-gray-300">
         From Idea to Report—Smarter, Faster.
         </p>        
 

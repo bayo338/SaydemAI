@@ -16,19 +16,19 @@ const Footer = () => (
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo & Tagline */}
-        <div className="space-y-4">
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Saydem AI Logo" className="h-8 w-8" />
-            <span className="text-2xl font-bold">Saydem AI</span>
+        <div className="">
+          <div className="flex items-center">
+            <img src="src/assets/logoWhite.png" alt="Saydem AI Logo" className="" />
+            {/* <span className="text-2xl font-bold">Saydem AI</span> */}
           </div>
           <p className="text-gray-300">
-            Get your final year project swiftly handled by <span className="text-green-400">AI</span>
+            Get your technical report handled <span className="text-green-400">swiftly</span>
           </p>
           {/* <button className="mt-4 px-4 py-2 bg-green-600 hover:bg-green-500 rounded-md transition">
             Start Now
           </button> */}
 
-          <Link to="/get-started">
+          <Link to="/get-started" className='bg-blue-700'>
               <button className="flex items-center gap-2 px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 active:bg-green-900 mt-4 transition duration-200">
               Get Started
               <FiFeather className="text-white" />

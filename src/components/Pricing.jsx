@@ -19,11 +19,11 @@ const Pricing = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Section Header */}
-        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">
+        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white lg:mt-3">
           Pricing Plans
         </h2>
         <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-          Pick the plan that best fits your final year project needs.
+          Pick the plan that best fits your technical report needs.
         </p>
 
         {/* Pricing Cards */}
@@ -35,9 +35,9 @@ const Pricing = () => {
               $0<span className="text-xl font-medium">/mo</span>
             </p>
             <ul className="mt-6 space-y-4 text-gray-600 dark:text-white flex-1">
-              <li>AI‑generated outline</li>
-              <li>1 draft revision</li>
-              <li>Email support</li>
+              <li>Decent Model</li>
+              <li>⁠5 references per report</li>
+              <li>⁠Limited amount of tokens</li>
             </ul>
             <button className="mt-6 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-500 transition">
               Choose Free
@@ -48,12 +48,12 @@ const Pricing = () => {
           <div className="border-2 border-purple-500 rounded-lg p-6 shadow-xl flex flex-col">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Special</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-              $49<span className="text-xl font-medium">/mo</span>
+              $30k<span className="text-xl font-medium">/mo</span>
             </p>
             <ul className="mt-6 space-y-4 text-gray-600 dark:text-white flex-1">
-              <li>Everything in Basic</li>
-              <li>Up to 5 revisions</li>
-              <li>Priority support</li>
+              <li>Smart Model</li>
+              <li>⁠25 references per report</li>
+              <li>million tokens</li>
             </ul>
             <button className="mt-6 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-500 transition">
               Choose Special
@@ -64,12 +64,13 @@ const Pricing = () => {
           <div className="border-4 border-amber-500 rounded-lg p-6 shadow-sm flex flex-col">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Premium</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-              $99<span className="text-xl font-medium">/mo</span>
+              $45k<span className="text-xl font-medium">/mo</span>
             </p>
             <ul className="mt-6 space-y-4 text-gray-600 dark:text-white flex-1">
-              <li>Unlimited drafts</li>
-              <li>Dedicated account manager</li>
-              <li>Custom AI models</li>
+              <li>Smart model</li>
+              <li>⁠60 references per report</li>
+              <li>⁠2 million tokens</li>
+              <li>⁠Presentation Slides for report</li>              
             </ul>
             <button className="mt-6 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-500 transition">
               Contact Premium
