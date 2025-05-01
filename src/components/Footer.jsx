@@ -4,6 +4,7 @@ import React from 'react';
 import { FaInstagram, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import { FiFeather  } from 'react-icons/fi';
 import { Link } from "react-router-dom";
+import logo from '../assets/logoWhite.png';
 
 const Footer = () => (
   <footer id="footer" className="relative bg-green-950 text-white py-16 overflow-hidden">
@@ -18,10 +19,10 @@ const Footer = () => (
         {/* Logo & Tagline */}
         <div className="">
           <div className="flex items-center">
-            <img src="src/assets/logoWhite.png" alt="Saydem AI Logo" className="" />
+            <img src={logo} alt="Saydem AI Logo" className="" />
             {/* <span className="text-2xl font-bold">Saydem AI</span> */}
           </div>
-          
+
           <Link to="/get-started" className='bg-blue-700'>
               <button className="flex items-center gap-2 px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 active:bg-green-900 mt-4 transition duration-200">
               Get Started
