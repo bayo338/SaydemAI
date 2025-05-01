@@ -53,7 +53,7 @@ const Pricing = () => {
             <ul className="mt-6 space-y-4 text-gray-600 dark:text-white flex-1">
               <li>Smart Model</li>
               <li>⁠25 references per report</li>
-              <li>million tokens</li>
+              <li>1 million tokens</li>
             </ul>
             <button className="mt-6 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-500 transition">
               Choose Special

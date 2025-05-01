@@ -31,9 +31,9 @@ const Home = () => {
                 delay: 100,
                 deleteSpeed: 75,
               }}
-            />
-          </span> report
-          <br />handled <span className="text-green-600">swiftly</span>
+            />{" "}
+          </span><br className='md:hidden' /> report
+          <br className='hidden md:block' /> handled <span className="text-green-600">swiftly</span>
         </h1>
 
         {/* <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
