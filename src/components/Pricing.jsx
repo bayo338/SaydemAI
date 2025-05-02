@@ -32,7 +32,8 @@ const Pricing = () => {
           <div className="border border-green-400 rounded-lg p-6 shadow-sm flex flex-col dark:text-white">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white ">Free</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-            &#8358;0<span className="text-xl font-medium">/mo</span>
+            &#8358;0
+            {/* <span className="text-xl font-medium">/mo</span> */}
             </p>
             <ul className="mt-6 space-y-4 text-gray-600 dark:text-white flex-1">
               <li>Decent Model</li>
@@ -48,7 +49,8 @@ const Pricing = () => {
           <div className="border-2 border-purple-500 rounded-lg p-6 shadow-xl flex flex-col">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Special</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-            &#8358;30k<span className="text-xl font-medium">/mo</span>
+            &#8358;30k
+            {/* <span className="text-xl font-medium">/mo</span> */}
             </p>
             <ul className="mt-6 space-y-4 text-gray-600 dark:text-white flex-1">
               <li>Smart Model</li>
@@ -64,7 +66,8 @@ const Pricing = () => {
           <div className="border-4 border-amber-500 rounded-lg p-6 shadow-sm flex flex-col">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Premium</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-            &#8358;45k<span className="text-xl font-medium">/mo</span>
+            &#8358;45k
+            {/* <span className="text-xl font-medium">/mo</span> */}
             </p>
             <ul className="mt-6 space-y-4 text-gray-600 dark:text-white flex-1">
               <li>Smart model</li>
