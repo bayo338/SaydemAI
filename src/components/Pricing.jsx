@@ -29,7 +29,7 @@ const Pricing = () => {
         {/* Pricing Cards */}
         <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
           {/* Free Tier */}
-          <div className="border border-green-400 rounded-lg p-6 shadow-sm flex flex-col dark:text-white">
+          <div className="border-1 border-green-400 rounded-lg p-6 shadow-xl flex flex-col">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white ">Free</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
             &#8358;0
@@ -46,7 +46,7 @@ const Pricing = () => {
           </div>
 
           {/* Special Tier (Highlighted) */}
-          <div className="border-2 border-purple-500 rounded-lg p-6 shadow-xl flex flex-col">
+          <div className="border-1 border-purple-500 rounded-lg p-6 shadow-xl flex flex-col">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Special</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
             &#8358;30k
@@ -63,7 +63,7 @@ const Pricing = () => {
           </div>
 
           {/* Premium Tier */}
-          <div className="border-4 border-amber-500 rounded-lg p-6 shadow-sm flex flex-col">
+          <div className="border-1 border-amber-500 rounded-lg p-6 shadow-xl flex flex-col">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Premium</h3>
             <p className="mt-4 text-4xl font-extrabold text-gray-900 dark:text-white">
             &#8358;45k
