@@ -16,6 +16,8 @@ const Navbar = ({ hideAuthButtons = false }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
+
 
   const handleNavClick = (section) => {
     if (location.pathname !== "/") {
@@ -31,6 +33,15 @@ const Navbar = ({ hideAuthButtons = false }) => {
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  const handleCloseMenu = () => {
+  setClosing(true);
+  setTimeout(() => {
+    setMenuOpen(false);
+    setClosing(false);
+  }, 300); // match this duration to your slideUp animation
+};
+
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-white shadow-md dark:bg-gray-900`}>
@@ -69,10 +80,10 @@ const Navbar = ({ hideAuthButtons = false }) => {
         </div>
 
         {/* Right Section */}
-          <div className="flex items-center md:space-x-6">
-          {/* Show Sign Up + Hamburger on small screens only */}
+        <div className="flex items-center md:space-x-6">
+          {/* Show Sign Up + Hamburger on Mobile view */}
           <div className="flex items-center md:hidden space-x-2 px-2">
-          {!menuOpen && (
+          {!menuOpen ? (
             <>
               {!hideAuthButtons && (
                 <Link to="/signup" onClick={() => setMenuOpen(false)}>
@@ -85,8 +96,23 @@ const Navbar = ({ hideAuthButtons = false }) => {
                 <FiMenu className="w-6 h-6 text-green-600" />
               </button>
             </>
-          )}
-        </div>
+          ) : (
+            <>
+          <button 
+            onClick={toggleDarkMode}
+            className="p-2 text-gray-600 dark:text-white transition-colors duration-200"
+            title="Toggle Dark Mode"
+          >
+            {darkMode ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
+          </button>
+          <button onClick={handleCloseMenu}>
+            <svg className="w-6 h-6 text-green-600 hover:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+      </>
+        )}
+    </div>
 
       {/* Desktop Login & Get Started */}
       {!hideAuthButtons && (
@@ -105,7 +131,7 @@ const Navbar = ({ hideAuthButtons = false }) => {
         </div>
       )}
 
-      {/* Dark Mode Toggle */}
+      {/* Dark Mode Toggle (desktop only) */}
       <button 
         onClick={toggleDarkMode}
         className="hidden md:block p-2 text-gray-600 dark:text-slate-100  transition-colors duration-200"
@@ -121,41 +147,19 @@ const Navbar = ({ hideAuthButtons = false }) => {
       {/* slideDown Menu */}
       {menuOpen && (
         <>
-          {/* Makes the entire body dull when slidedown menu is activated */}
+        {/* Dark overlay when the dropdown is active*/}
           <div
-            className="fixed inset-0 bg-black opacity-50 z-30"
+            className="fixed top-20 left-0 w-full h-[calc(100vh-4rem)] bg-black bg-opacity-50 z-30"
             onClick={() => setMenuOpen(false)}
           ></div>
-          {/* end */}
+        {/* end */}
 
-          <div className="md:hidden absolute top-0 left-0 w-full bg-gray-100 dark:bg-gray-800 z-40 shadow-lg animate-slideDown">
-            <div className="flex justify-between items-center px-4 py-3 border-b border-green-300">
-              {/* <div className="flex items-center space-x-2">
-                <img src="logo.png" alt="Seydam AI logo" className="h-6 w-6" />
-                <span className="text-xl font-semibold">Seydam AI</span>
-              </div> */}
+          <div
+            className={`md:hidden absolute top-full left-0 w-full bg-gray-100 dark:bg-gray-800 z-40 shadow-lg ${
+              closing ? "animate-slideUp" : "animate-slideDown"
+            }`}
+          >
 
-              <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center space-x-2 cursor-pointer">
-                <img src={logo} alt="Seydam AI logo" className="h-14" />
-                {/* <span className="text-2xl font-bold">Seydam AI</span> */}
-              </Link>
-
-              <div className='flex items-center space-x-2'>
-                <button onClick={toggleDarkMode}
-                  className="block p-2  text-green-600 hover:text-green-100 transition-colors duration-200"
-                  title="Toggle Dark Mode"
-                >
-                  {darkMode ? <SunIcon className="w-6 h-6" /> : <MoonIcon className="w-6 h-6" />}
-                </button>
-
-                <button onClick={() => setMenuOpen(false)}>
-                  <svg className="w-6 h-6 text-green-600 hover:text-green-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              
-            </div>
             <div className="flex flex-col items-center space-y-4 px-6 py-4 text-green-600">
               {!hideAuthButtons && (
                 <>
@@ -166,8 +170,7 @@ const Navbar = ({ hideAuthButtons = false }) => {
                       <FiFeather className="text-white" />
                     </button>
                   </Link>
-                  {/* <Link to="/signup" onClick={() => setMenuOpen(false)} className="hover:text-green-300">Sign Up</Link> */}
-
+                  
                   {/* stroke in between */}
                   <div className="items-center px-8 border-b border-green-300"></div>
                 </>

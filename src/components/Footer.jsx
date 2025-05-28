@@ -19,8 +19,8 @@ const Footer = () => (
         {/* Logo & Tagline */}
         <div className="">
           <div className="flex items-center">
-            <img src={logo} alt="Saydem AI Logo" className="" />
-            {/* <span className="text-2xl font-bold">Saydem AI</span> */}
+            <img src={logo} alt="Seydam AI Logo" className="" />
+            {/* <span className="text-2xl font-bold">Seydam AI</span> */}
           </div>
 
           <Link to="/get-started" className='bg-blue-700'>
@@ -53,6 +53,16 @@ const Footer = () => (
           </ul>
         </div>
 
+        {/* Legal */}
+        <div>
+          <h3 className="text-lg font-semibold">Legal</h3>
+          <ul className="mt-4 space-y-2 text-gray-300">
+            <li><a href="#home" className="hover:text-white">Terms and Conditions</a></li>
+            <li><a href="#pricing" className="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#services" className="hover:text-white">FAQ</a></li>
+          </ul>
+        </div>
+
         {/* Social Icons */}
         <div>
           <h3 className="text-lg font-semibold">Connect</h3>
@@ -66,7 +76,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-12 border-t border-green-700 pt-6 text-center text-gray-400 text-sm">Copyright
-        &copy; {new Date().getFullYear()} Saydem. All rights reserved.
+        &copy; {new Date().getFullYear()} Seydam. All rights reserved.
       </div>
     </div>
   </footer>
